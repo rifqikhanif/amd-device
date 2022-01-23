@@ -6,6 +6,15 @@ COPY package*.json ./
 
 
 COPY . .
+RUN apt-get update && \
+  apt-get install -y \
+  neofetch \
+  ffmpeg \
+  wget \
+  chromium \ 
+  imagemagick && \
+  rm -rf /var/lib/apt/lists/*
+
 
 RUN set -x \
 && apt-get update \
