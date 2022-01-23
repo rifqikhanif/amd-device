@@ -15,6 +15,11 @@ RUN apt-get update && \
   imagemagick && \
   rm -rf /var/lib/apt/lists/*
 
+RUN npm install -g npm@latest
+RUN npm instal pm2 -g
+RUN npm install ytdl-core@latest
+RUN npm install yt-search@latest
+
 
 RUN set -x \
 && apt-get update \
